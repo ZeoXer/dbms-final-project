@@ -2,15 +2,15 @@
 ```
 backend
 |
-|- .env (儲存環境變數)
+|– .env (儲存環境變數)
 |
-|- __init__.py (初始化伺服器，引入 API 和資料庫)
+|– __init__.py (初始化伺服器，引入 API 和資料庫)
 |
-|- main.py (伺服器啟動的位置)
+|– main.py (伺服器啟動的位置)
 |
-|- api.py (API function 的位置，可以視情況另開資料夾拆檔整理)
+|– api.py (API function 的位置，可以視情況另開資料夾拆檔整理)
 |
-|- models.py (定義資料庫的位置，可以視情況另開資料夾拆檔整理)
+|– models.py (定義資料庫的位置，可以視情況另開資料夾拆檔整理)
 
 ```
 
@@ -21,8 +21,9 @@ backend
 git clone https://github.com/ZeoXer/dbms-final-project.git
 ```
 
-2. 下載 python 所需的相關套件
+2. 進入 `backend` 資料夾，並下載 python 所需的相關套件
 ```
+cd backend
 pip install requirement.txt
 ```
 
@@ -31,13 +32,12 @@ pip install requirement.txt
 DATABASE_URI=資料庫連結
 ```
 
-4. 進入 `backend` 資料夾並啟動 server
+4. 啟動 server
 ```
-cd backend
 python main.py
 ```
 
-5. 若有新的修改，完成後提交紀錄並上傳
+5. 若有新的修改，完成後提交紀錄並上傳 (協作方式待決定)
 ```
 git add <檔案>
 git commit -m "紀錄訊息"
