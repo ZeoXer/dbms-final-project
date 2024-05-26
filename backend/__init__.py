@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-from models import Item
+from models import Department, Teacher
 from api import api
 
 app.register_blueprint(api, url_prefix='/api')
