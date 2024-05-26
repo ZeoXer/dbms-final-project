@@ -24,7 +24,7 @@ git clone https://github.com/ZeoXer/dbms-final-project.git
 2. 進入 `backend` 資料夾，並下載 python 所需的相關套件
 ```
 cd backend
-pip install requirement.txt
+pip install -r requirements.txt
 ```
 
 3. 將 `.env.default` 複製一份並改名為 `.env`，並在裡面輸入資料庫的連結

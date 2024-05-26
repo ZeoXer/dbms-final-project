@@ -1,4 +1,5 @@
 flask
 flask_sqlalchemy
-dotenv
+flask_migrate
+python-dotenv
 mysql-connector-python
