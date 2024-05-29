@@ -1,0 +1,369 @@
+teacher_id,Cname,Ename,job_title,year,dep_id
+125929,王智弘,"Wang, Jason Chih-Hung",Associate Professor,2019.0,300
+111283,何小台,"Ho, Chester S.",Professor,2010.0,933
+129823,李鐘培,,Professor,,933
+127335,汪志謙,"Wang, Chih-Chien",Associate Professor,2019.0,300
+131347,車麗梅,,Professor,,303
+128219,周建宏,,Professor,,303
+102306,尚孝純,"Shang, Shari S.C.",Professor,2015.0,306
+123305,林宜信,"Lin, Ye-Hsin",Associate Professor,2017.0,303
+307001,林烱垚,"Lin, Joung-Yol",Professor,1998.0,307
+123944,胡聯國,,Professor,,301
+126020,范博宏,,Professor,,300
+126928,孫全玉,,Professor,,302
+128220,徐永堅,"Hsu, Yung-Chien",Professor,2021.0,303
+118069,張永明,"Chang, Yung-Ming",Associate Professor,2013.0,933
+131056,張聰本,,Instructor,,305
+130035,梅國卿,,Assistant Professor,,364
+107799,許仲翔,"Hsu, Jason C.",Professor,2007.0,933
+124035,許崇源,"Hsu, Chung-Yuan",Professor,1982.0,303
+131499,陳威光,"Chen, Wei-Kuang",Professor,1995.0,302
+122815,陳虹伶,"Chen, Hung-Ling",Associate Professor,2017.0,307
+113809,陳國成,"Chen, Kuo-Cheng",Associate Professor,2010.0,364
+121709,陳富沛,"Chen, Parker",Associate Professor,2016.0,301
+129963,陳開元,,Associate Professor,,308
+125547,彭火樹,"Peng, Huo-Shu",Professor,2019.0,303
+128286,曾耀鋒,,Associate Professor,,308
+107704,黃正忠,"Huang, Cheng-Chung",Associate Professor,2008.0,363
+113035,劉孔中,"Liu, Kung-Chung",Professor,2009.0,364
+129599,劉祝安,,Associate Professor,,301
+113811,蔡惠如,"Tsai, Huei-Ju",Assistant Professor,2010.0,364
+131542,蔡敦仁,,Assistant Professor,,300
+116476,鄭丁旺,"Cheng, Ting-Wong",Professor,1975.0,303
+127357,鄭如孜,"Cheng, Ju-Tzu",Associate Professor,2020.0,303
+304009,鄭宇庭,"Cheng, Yu-Ting",Associate Professor,1997.0,304
+102809,盧聯生,"Lu, Lien-Sheng",Associate Professor,2003.0,303
+351008,謝淑貞,"Shieh, Shwu-Jane",Professor,1993.0,301
+129683,簡睿哲,"Jean, Bryan Ruey-Jer",Professor,2009.0,933
+119897,蘇秋錦,"Su, Bonnie",Associate Professor,2015.0,301
+131545,龔則立,,Associate Professor,,307
+130150,温紹羣,,Assistant Professor,,303
+114576,于紀隆,"Yu, Chi-Lung",Professor,2011.0,303
+101476,王文英,"Wang, Wen-Ying",Professor,1999.0,303
+308001,王正偉,"Wang, Cheng-Woei",Instructor,1990.0,308
+104280,王采彤,,助教,,307
+101881,王淑珍,,助教,,303
+101388,王儷玲,"Wang, Li-Ling",Professor,1998.0,308
+111389,古如君,,Instructor,,301
+124500,司徒達賢,"Seetoo, Dah-Hsian",Professor,2018.0,305
+115898,白佩玉,"Pai, Pei-Yu",Associate Professor,2012.0,305
+105894,白德傑,"Brodowsky, Glen Howard",Professor,2008.0,933
+131349,向倩儀,,Assistant Professor,,306
+110327,曲建仲,"Chiu, Jiann-Jong",Assistant Professor,2008.0,364
+127278,朴民佑,"Park, Minwoo",Assistant Professor,2020.0,301
+125908,朴星俊,"Park, Steven Sungjun",Associate Professor,2019.0,305
+132481,朱家德,,Assistant Professor,,303
+122683,朱浩民,"Chu, Hau-Min",Professor,1991.0,302
+112225,江永裕,"Chiang, Yeong-Yuh",Professor,1995.0,302
+102102,江彌修,"Chiang, Mi-Hhsiu",Professor,2001.0,302
+131059,玎公明,,Instructor,,305
+130038,何乾瑋,,Assistant Professor,,301
+128457,何富年,"Ho, Foo-Nin",Professor,2010.0,933
+124584,余千智,"Yu, Chien-Chih",Professor,2018.0,306
+354008,余清祥,"Yue, Jack Ching-Syang",Professor,1994.0,304
+305020,別蓮蒂,"Bei, Lien-Ti",Professor,1995.0,305
+353004,吳安妮,"Wu, Anne",Professor,1990.0,303
+128564,吳思華,"Wu, Se-Hwa",Professor,1983.0,364
+307005,吳啟銘,"Wu, Chimming",Associate Professor,1991.0,307
+128823,吳漢銘,,Associate Professor,,304
+152501,吳靜吉,"Wu, J. J.",Professor,1972.0,363
+130717,吳豐祥,"Wu, Feng-Shang",Professor,1994.0,364
+102323,呂桔誠,,Associate Professor,,302
+117535,宋皇志,"Sung, Huang-Chih",Professor,2013.0,364
+107983,巫立宇,"Wu, Lei-Yu",Professor,2008.0,305
+301994,李玉如,,助教,,301
+118774,李克明,"Li, Ke-Ming",Associate Professor,2018.0,300
+102107,李志宏,"Lee, Jie-Haun",Professor,2001.0,307
+121785,李佳玲,"Lee, Chia-Ling",Professor,2016.0,303
+126893,李怡慧,"Lee, Joyce Yi-Hui",Associate Professor,2020.0,306
+128689,李易諭,"Lee, Yih-Yuh",Associate Professor,1990.0,305
+103713,李香瑩,,助教,,301
+122684,李桐豪,"Lee, Tung-Hao",Professor,1992.0,302
+128825,李博逸,,Instructor,,306
+117137,李智明,"Lee, Chih-Ming",Professor,2013.0,305
+107927,李瑞華,"Lee, Swee-Huat",Professor,2004.0,300
+125803,李曉惠,"Lee, Hsiao-Hui",Professor,2019.0,306
+128277,李瓊淑,,Instructor,,305
+118733,杜雨儒,"Tu, Tony Yu-Ju",Associate Professor,2014.0,306
+124544,沈琪,,Instructor,,300
+128727,車倫周,,Assistant Professor,,307
+129490,周行一,"Chow, Edward H.",Professor,1998.0,307
+113615,周冠男,"Chou, Robin K.",Professor,2007.0,307
+117066,周彥君,"Chou, Amber Yen-Chun",Professor,2013.0,306
+128208,周玲臺,"Chou, Lynette Ling-Tai",Professor,1990.0,303
+127274,周致遠,"Chou, Ben Chih-Yuan",Assistant Professor,2020.0,306
+118732,周珮婷,"Chou, Elizabeth Pei-Ting",Associate Professor,2014.0,304
+101987,周國華,,Associate Professor,,303
+132574,尚孝純,"Shang, Shari S.C.",Professor,2015.0,933
+107982,岳夢蘭,"Yueh, Meng-Lan",Associate Professor,2008.0,307
+113641,林士貴,"Lin, Shih-Kuei",Professor,2010.0,302
+129597,林介勝,,Instructor,,305
+128691,林月雲,"Lin, Carol Yehyun",Professor,1999.0,305
+129595,林呈欣,,Instructor,,305
+131483,林我聰,"Lin, Woo-Tsong",Professor,1990.0,306
+101469,林育綺,,助教,,303
+117599,林良楓,"Lin, Liang-Feng",Associate Professor,1984.0,364
+128209,林宛瑩,"Lin, Wan-Ying",Associate Professor,1986.0,303
+121784,林怡伶,"Lin, Jennifer Yi-Ling",Associate Professor,2017.0,306
+123146,林知伸,,Professor,,933
+102349,林信助,"Lin, Shinn-Juh",Associate Professor,2002.0,301
+107022,林建秀,"Lin, Chien-Hsiu",Associate Professor,2007.0,302
+308002,林建智,"Lin, Jan-Juy",Professor,1991.0,308
+130149,林彥良,,Assistant Professor,,303
+123945,林柏生,,Professor,,301
+117436,林禹銘,"Lin, I-Min",Assistant Professor,2013.0,303
+133002,林國彬,,Professor,,308
+112944,林基煌,"Lin, Chi-Huang",Professor,1990.0,307
+119901,林湘霖,"Lin, Shiang-Lin",Assistant Professor,2015.0,306
+116259,林靖庭,"Lin, Ching-Ting",Associate Professor,2012.0,302
+301018,邱志聖,"Chiou, Jyh-Shen",Professor,1996.0,301
+113045,邱奕嘉,"Chiu, Yi-Chia",Professor,2010.0,364
+132172,邱健嘉,,Assistant Professor,,307
+102703,金成隆,"Chin, Chen-Lung",Professor,2003.0,303
+132474,金帛春,,Assistant Professor,,302
+133007,侯佩妤,,Assistant Professor,,305
+125959,俞京和,"Yu, Kyunghwa",Assistant Professor,2019.0,303
+303017,俞洪昭,"Yu, Hung-Chao",Professor,1996.0,303
+103902,施文真,"Shih, Wen-Chen",Professor,2004.0,301
+601009,施文森,"Sze, Vincent",Professor,1967.0,308
+125918,柯玉佳,"Ko, Yu-Chia",Assistant Professor,2019.0,364
+129541,柯志賢,,Professor,,303
+103903,洪叔民,"Horng, Shwu-Min",Professor,2004.0,305
+121807,洪為璽,"Hung, Frank Wei-His",Professor,2016.0,306
+131004,洪智鐸,,Assistant Professor,,306
+107924,胡昌亞,"Hu, Chang-Ya",Professor,2008.0,305
+111935,胡家榮,,Instructor,,300
+124031,郎祖明,,Assistant Professor,,300
+113618,郁方,"Yu, Fang",Associate Professor,2010.0,306
+131538,唐揆,,Professor,,305
+113492,徐則謙,"Hsu, Tse-Chien",Associate Professor,2010.0,301
+130036,徐政義,,Professor,,301
+125939,徐愛恩,"Tsui, Ai-An",Assistant Professor,2019.0,303
+132477,徐曉婷,,Assistant Professor,,303
+111197,殷乃平,,Professor,,302
+101653,翁久幸,"Weng, Ruby Chiu-Hsing",Professor,1999.0,304
+124407,翁嘉祥,"Weng, Chia-Hsiang",Associate Professor,2018.0,303
+122817,翁禮祺,"Ong, Rich",Assistant Professor,2017.0,307
+126891,馬秀如,"Ma, Sheree Shiow-Ru",Professor,1975.0,303
+122813,高端訓,"Kao, Duan-Hsun",Professor,2017.0,305
+126836,屠美亞,"Twu, Mia",Professor,1991.0,307
+308003,張士傑,"Chang, Shih-Chieh",Professor,1995.0,308
+102108,張元晨,"Chang, Yuan-Chen",Professor,2001.0,307
+131348,張志浩,,Associate Professor,,304
+128824,張育瑋,,Assistant Professor,,304
+102700,張欣綠,"Chang, Hsin-Lu",Professor,1995.0,306
+101598,張益元,,助教,,305
+119833,張祐慈,"Chang, Yu-Tzu",Associate Professor,2015.0,303
+111286,張景堯,"Chang, Jing-Yao",Assistant Professor,2009.0,306
+124481,張愛華,"Chang, Ai-Hwa",Professor,2018.0,305
+101454,張源俊,,Professor,,304
+115112,張瑜倩,"Chang, Yu-Chien",Associate Professor,2011.0,364
+104912,張瑋倫,"Chang, Wei-lun",Professor,2018.0,305
+305990,張維芬,,助教,,305
+102105,張興華,"Chang, Hsing-Hua",Associate Professor,2001.0,302
+102106,戚務君,"Chi, Wu-Chun",Professor,2001.0,303
+111282,扈企平,"Hu, Chi-Ping",Professor,2009.0,933
+128835,曹銀愛,,Assistant Professor,,305
+102380,梁嘉紋,"Liang, Jia-Wen",Professor,2002.0,303
+130158,莊弘鈺,,Associate Professor,,364
+117067,莊皓鈞,"Chuang, Howard Hao-Chun",Professor,2013.0,306
+355509,許士軍,"Hsu, Paul S.C.",Professor,1987.0,305
+114664,許永明,"Shiu, Yung-Ming",Professor,2011.0,308
+129966,許育瑋,,Assistant Professor,,305
+119796,許林舜,"Hsu, Lin-Shun",Associate Professor,2015.0,303
+102064,許牧彥,"Hsu, Mu-Yen",Assistant Professor,2001.0,364
+304994,許秋燕,,助教,,304
+127337,許晉銘,"Hsu, Vincent",Instructor,2020.0,303
+129360,許書瑋,,Associate Professor,,305
+133001,連婉茜,,Assistant Professor,,364
+132476,郭土木,,Professor,,303
+301016,郭炳伸,"Kuo, Biing-Shen",Professor,1995.0,301
+101607,郭維裕,"Kuo, Wei-Yu",Professor,1998.0,301
+123991,郭曉玲,"Guo, Shiau-Ling",Associate Professor,2018.0,305
+126927,陳正暉,,Assistant Professor,,302
+111758,陳立民,"Chen, Li-Ming",Professor,2009.0,305
+128655,陳立榜,,Assistant Professor,,304
+119921,陳宇紳,"Chen, Yu-Shen",Professor,2015.0,303
+130039,陳怡如,,Associate Professor,,304
+131062,陳怡安,,Instructor,,305
+118655,陳明吉,"Chen, Ming-Chi",Professor,2014.0,307
+110954,陳明哲,"Chen, Ming-Zhe",Professor,2008.0,364
+101567,陳明進,"Chen, Ming-Chin",Professor,1998.0,303
+119430,陳秉訓,"Chen, Bing-Xun",Professor,2015.0,364
+119794,陳俊元,"Chen, Chun-Yuan",Professor,2016.0,308
+130147,陳俊光,,Professor,,303
+125884,陳冠儒,"Chen, Kuan-Ju",Associate Professor,2019.0,305
+101830,陳建維,"Chen, Chien-Wei",Professor,2000.0,301
+131539,陳春龍,"Chen, Samuel C.L.",Professor,2000.0,306
+102657,陳恭,"Chen, Kung",Professor,2003.0,306
+308508,陳彩稚,"Chen, Tsai-Jyh",Professor,1991.0,308
+101627,陳樹,"Chen, Gordon S.",Professor,1999.0,303
+115028,陳錦烽,"Chen, Jiin-Feng",Associate Professor,1981.0,303
+118658,陳鴻毅,"Chen, Hong-Yi",Professor,2014.0,307
+131604,陳麗霞,"Chen, Li-Shya",Associate Professor,1993.0,304
+118656,陳嬿如,"Chen, Yenn-Ru",Professor,2014.0,307
+124573,傅文芳,"Fu, Andrew",Professor,2018.0,303
+301019,傅冶天,"Fu, Yee-Tien",Associate Professor,1997.0,301
+123164,傅浚映,"Fu, Jyun-Ying",Associate Professor,2017.0,305
+111578,彭朱如,"Peng, Tzu-Ju",Professor,2009.0,305
+114671,彭金隆,"Peng, Jin-Lung",Professor,2004.0,308
+128287,曾博昇,"Tseng, Po-Sheng",Instructor,2021.0,303
+125917,曾毓英,"Tzeng, Yu-Ying",Assistant Professor,2019.0,308
+115045,湛可南,"Chan, Konan",Professor,2012.0,307
+306012,湯宗益,"Tang, Michael",Professor,1992.0,306
+131544,費喬登,,Instructor,,305
+101854,馮震宇,"Fong, Jerry G.",Professor,2001.0,364
+101391,黃千容,,助教,,300
+105859,黃子銘,"Huang, Tzee-Ming",Associate Professor,2006.0,304
+128693,黃台心,"Huang, Tai-Hsin",Professor,2005.0,302
+105923,黃正宗,"Huang, Cheng-Tsung",Associate Professor,1995.0,308
+125919,黃佳慧,"Huang, Chia-Hui",Associate Professor,2019.0,304
+101801,黃泓智,"Hung, Hong-Chih",Professor,2000.0,308
+128264,黃秉德,"Huang, Ping-Der",Associate Professor,1991.0,305
+131061,黃政二,,Instructor,,303
+125916,黃政仁,"Huang, Cheng-Jen",Associate Professor,2019.0,303
+111520,黃家齊,"Huang, Jia-Chi",Professor,2009.0,305
+104973,黃國峯,"Huang, Kuo-Feng",Professor,2005.0,305
+125161,黃群仰,,Professor,,307
+127364,黃嘉威,"Huang, Chia-Wei",Professor,2020.0,307
+307501,黃慶堂,"Huang, Chin-Tan",Associate Professor,1990.0,307
+104929,楊文敏,,助教,,304
+301015,楊光華,"Yang, Guang-Hwa",Professor,1995.0,301
+128282,楊光磊,"Young, Konrad G.",Professor,2021.0,933
+129491,楊亨利,"Yang, Henry",Professor,1993.0,306
+130040,楊宗翰,,Assistant Professor,,364
+354005,楊素芬,"Yang, Su-Fen",Professor,1991.0,304
+111933,楊健威,,Instructor,,300
+116258,楊培侃,"Yang, Pei-Kan",Professor,2013.0,301
+125511,楊曉文,"Yang, Sharon S.W.",Professor,2019.0,302
+101831,溫偉任,"Wen, Wei-Jen",Assistant Professor,2000.0,301
+133005,董奕賢,,Assistant Professor,,304
+105921,詹文男,"Zhan, Wen-Nan",Professor,2006.0,300
+111058,詹凌菁,"Chan, Ling-Ching",Professor,2009.0,303
+132598,廖士傑,,Assistant Professor,,308
+128694,廖四郎,"Lio, Szu-Lang",Professor,1997.0,302
+121376,廖柏蒼,,Assistant Professor,,303
+128284,廖哲莉,"Liaw, Cheli",Professor,2021.0,303
+113613,趙世偉,"Chao, Shih-Wei",Associate Professor,2010.0,302
+124028,劉文彬,"Liu, Wen-Pin",Assistant Professor,2008.0,308
+253503,劉必榮,"Liu, Bih -Rong",Professor,2009.0,363
+111323,劉江彬,,Professor,,364
+106855,劉助,"Liu, Chu",Professor,2007.0,933
+111650,劉秀明,"Liu, Sandra S.",Professor,2009.0,933
+124032,劉長灝,,Assistant Professor,,300
+102090,劉淑芳,,助教,,302
+102702,劉惠美,"Liu, Hui-Mei",Professor,2003.0,304
+119795,劉鏡清,"Liu, Chin-Ching",Professor,2015.0,303
+305018,樓永堅,"Lou, Yung-Chien",Professor,1993.0,305
+127273,潘振宇,"Pan, Chen-Yu",Associate Professor,2020.0,301
+118657,潘健民,"Pan, Chien-Min",Associate Professor,2014.0,303
+101600,蔡政憲,"Tsai, Cheng-Hsien",Professor,1998.0,308
+124532,蔡致遠,"Tsai, Chu-Yuan",Assistant Professor,2018.0,301
+127268,蔡紋琦,"Tsai, Wen-Chi",Assistant Professor,2020.0,304
+306009,蔡瑞煌,"Tsaih, Rua-Huan",Professor,1991.0,306
+103897,蔡維奇,"Tsai, Wei-Chi",Professor,2004.0,305
+102063,鄭士卿,"Jeng, Shih-Ching",Professor,2001.0,308
+132982,鄭宇庭,"Cheng, Yu-Ting",Associate Professor,1997.0,304
+118330,鄭至甫,"Jeng, Jyh-Fu",Professor,2014.0,364
+101654,鄭宗記,"Cheng, Tsung-Chi",Professor,1999.0,304
+133003,鄭琬蓉,,Assistant Professor,,301
+121802,鄭菀瓊,"Cheng, Wan-Qiong",Associate Professor,2016.0,364
+129361,鄭濬浩,,Assistant Professor,,301
+130016,鄭鴻章,,Associate Professor,,301
+104849,盧敬植,"Lu, Ching-Chih",Associate Professor,2005.0,307
+122802,蕭舜文,"Hsiao, Mike Shun-Wen",Associate Professor,2017.0,306
+107009,蕭瑞麟,"Hsiao, Ruey-Lin",Professor,2007.0,364
+258509,賴志仁,"Lai, Gene C. Lai",Professor,2003.0,308
+124088,賴森本,"Lai, Sen-Been",Associate Professor,2018.0,303
+121779,薛景文,"Hsueh, Ching-Wen",Associate Professor,2016.0,301
+102062,薛慧敏,"Hsueh, Huey-Miin",Professor,2001.0,304
+133032,謝沛霖,,Associate Professor,,307
+102048,謝明華,"Hsieh, Ming-Hua",Professor,2001.0,308
+125920,謝凱宇,"Hsieh, Kai-Yu",Associate Professor,2019.0,305
+127269,鍾令德,"Chung, Ling-Tak",Assistant Professor,2020.0,301
+305021,韓志翔,"Han, Tzu-Shian",Professor,1995.0,305
+123260,簡士鎰,"Chien, James Shih-Yi",Associate Professor,2018.0,306
+105030,簡岑伃,,助教,,300
+117143,顏世禮,,Instructor,,307
+118586,顏佑銘,"Yen, Yu-Min",Associate Professor,2014.0,301
+118544,顏錫銘,"Yen, Simon H.",Professor,2014.0,363
+105977,鄺慧琪,,Instructor,,300
+107991,羅明琇,"Lo, Ming-Shiow",Professor,2008.0,305
+128808,羅秉政,,Assistant Professor,,302
+102104,譚丹琪,"Tan, Dan-Chi",Professor,2001.0,301
+122580,蘇瓜藤,"Su, Robert K.",Professor,1992.0,303
+117118,蘇威傑,"Su, Wei-Chieh",Professor,2013.0,301
+130999,于卓民,"Yu, Joseph Chwo-Ming",Professor,1992.0,305
+301012,于卓民,"Yu, Joseph Chwo-Ming",Professor,1992.0,305
+111285,何富年,"Ho, Foo-Nin",Professor,2010.0,933
+125347,余峻瑜,"Yu, Jiun-Yu",Assistant Professor,2019.0,306
+127361,余相賓,"Yu, Hsiang-Pin",Instructor,2019.0,305
+118370,劉世慶,"Liu, Shih-Ching",Assistant Professor,2013.0,305
+355001,司徒達賢,"Seetoo, Dah-Hsian",Professor,2018.0,305
+305003,吳思華,"Wu, Se-Hwa",Professor,1983.0,364
+124453,吳恬妤,"Wu, Tien-Yu",Instructor,2018.0,305
+359001,吳豐祥,"Wu, Feng-Shang",Professor,1994.0,364
+111875,吳雅鈴,"Wu, Ya-Ling",Associate Professor,2009.0,306
+101968,周濟群,"Chou, Chi-Chun",Professor,2020.0,303
+303004,周玲臺,"Chou, Lynette Ling-Tai",Professor,1990.0,303
+302010,周行一,"Chow, Edward H.",Professor,1998.0,307
+124027,姚維仁,"Yao, Wei-Ren",Associate Professor,2018.0,303
+306017,姜國輝,"Chiang, Johannes K.",Associate Professor,1994.0,306
+121871,季延平,"Chi, Jeffery Yan-Ping",Associate Professor,2017.0,306
+307004,屠美亞,"Twu, Mia",Professor,1991.0,307
+302012,廖四郎,"Lio, Szu-Lang",Professor,1997.0,302
+304503,張大為,"Chang, Ta-Wei",Assistant Professor,2011.0,933
+125565,張彥成,"Chang, Yen-Cheng",Instructor,2019.0,305
+122685,張清福,"Chang, Chin-Fu",Assistant Professor,2000.0,303
+126739,張瑞岩,"Chang, Jui-Yen",Instructor,2020.0,306
+125494,彭志宏,"Peng, Chih-Hung",Associate Professor,2019.0,306
+130290,彭志宏,"Peng, Chih-Hung",Associate Professor,2019.0,306
+126872,徐景輝,"Hsu, Ching-Huei",Instructor,2020.0,305
+103673,施博文,"Shih, Po-Wen",Associate Professor,2004.0,303
+119431,曾惠瑾,"Tseng, Audrey",Professor,2014.0,303
+306010,曾淑峰,"Tseng, Shu-Feng",Associate Professor,1992.0,306
+121933,朱竹元,"Chu, Daniel C.Y.",Associate Professor,2016.0,307
+305008,李易諭,"Lee, Yih-Yuh",Associate Professor,1990.0,305
+119902,林仁祥,"Lin, Ren-Xiang",Instructor,2015.0,306
+303009,林宛瑩,"Lin, Wan-Ying",Associate Professor,1986.0,303
+306007,林我聰,"Lin, Woo-Tsong",Professor,1990.0,306
+101477,林月雲,"Lin, Carol Yehyun",Professor,1999.0,305
+121161,林美花,"Lin, Mei-Hwa",Professor,2016.0,307
+121254,林芝樺,"Lin, Chih-Hua",Instructor,2016.0,305
+115014,梁定澎,"Liang, Ting-Peng",Professor,2015.0,306
+119844,梁定澎,"Liang, Ting-Peng",Professor,2015.0,306
+306014,楊亨利,"Yang, Henry",Professor,1993.0,306
+123855,楊建民,"Yang, Jian-Min",Professor,2018.0,306
+121259,樊學良,"Fan, Xue-Liang",Assistant Professor,2016.0,364
+354006,江振東,"Chiang, Jeng-Tung",Associate Professor,1992.0,304
+107926,沈臨龍,"Shen, Leon",Professor,2007.0,308
+111651,洪英超,"Hung, Ying-Chao",Professor,1994.0,304
+128690,洪順慶,"Horng, Shun-Ching",Professor,1990.0,305
+355005,洪順慶,"Horng, Shun-Ching",Professor,1990.0,305
+121350,溫肇東,"Wen, Chao-Tung",Professor,1995.0,932
+121258,熊震寰,"Shyurng, Edward J.",Professor,2016.0,933
+127360,田錦宏,"Tyan, Jonah",Instructor,2019.0,305
+111580,簡睿哲,"Jean, Bryan Ruey-Jer",Professor,2009.0,301
+125563,翁玲華,"Weng, Ling-Hua",Instructor,2019.0,305
+118775,荒井夏來,Natsuki Arai,Associate Professor,2014.0,301
+101793,蔡紋琦,"Tsai, Wen-Chi",Assistant Professor,2020.0,304
+127336,蔡素芬,"Tsai, Su-Fen",Assistant Professor,2020.0,301
+303510,蔡金拋,"Tsai, James",Associate Professor,1992.0,303
+306018,諶家蘭,"Seng, Jia-Lang",Professor,1994.0,303
+127362,謝宏明,"Hsieh, Hung-Ming",Instructor,2019.0,305
+125880,賴冠仲,"Lai, Guan-Jhong",Professor,2019.0,303
+354004,鄭天澤,"Jeng, Tian-Tzer",Associate Professor,1989.0,304
+302009,陳威光,"Chen, Wei-Kuang",Professor,1995.0,302
+121775,陳富煒,"Chen, Fu-Wei",Professor,2016.0,303
+113512,陳帝富,"Chen, Jimmy D.",Associate Professor,2010.0,307
+101759,陳春龍,"Chen, Samuel C.L.",Professor,2000.0,306
+121872,陳玉麟,"Chen, Yu-Lin",Professor,2016.0,303
+122725,陳聖賢,"Chen, Sheng-Syan",Professor,2017.0,307
+304007,陳麗霞,"Chen, Li-Shya",Associate Professor,1993.0,304
+301013,饒秀華,"Rau, Hsiu-Hua",Associate Professor,1994.0,301
+303001,馬秀如,"Ma, Sheree Shiow-Ru",Professor,1975.0,303
+126856,黃冠華,"Huang, Sunny",Assistant Professor,2020.0,300
+104856,黃台心,"Huang, Tai-Hsin",Professor,2005.0,302
+305011,黃秉德,"Huang, Ping-Der",Associate Professor,1991.0,305
+303507,黃金發,"Hwang, Jin-Fa",Associate Professor,1980.0,303
+123155,黃韋仁,"Huang, Wei-Jen",Instructor,2017.0,305

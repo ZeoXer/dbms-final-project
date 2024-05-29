@@ -1,0 +1,16 @@
+department_id,department_Ename,department_Cname
+300,College of Commerce,商學院
+301,Intl Buss,國際經營與貿易學系
+302,Finance,金融學系
+303,Accounting,會計學系
+304,Statistics,統計學系
+305,BA,企業管理學系
+306,MIS,資訊管理學系
+307,M & B,財務管理學系
+308,RMI,風險管理與保險學系
+363,MBA,企業管理研究所(MBA)
+364,TIM & IIP,科技管理與智慧財產研究所
+932,EMBA,經營管理碩士學程(EMBA)
+933,IMBA,國際經營管理英語碩士學位學程(IMBA)
+998,DBA,產業組博士學位學程(DBA)
+999,Others,外院
