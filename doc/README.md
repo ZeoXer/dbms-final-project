@@ -454,7 +454,7 @@ graph TD;
 
 -->
 
-* (weak)List(學術、實務與教學貢獻清單): *item_name*(篇名/獎項/政策法案名稱/論文題目/計畫名稱)、*item_year*(年度)、item_type(類別)、journal(期刊名)、journal_type(期刊屬SSCI/SCI/TSSCI or equivalent)、co_worker_in(與本院教授共同創作姓名)、co_worker_out(與本院學生或本校外院師生或校外人士共同創作姓名)、scholarship_type(屬性)、equis(EQUIS分類)
+* (weak)List(學術、實務與教學貢獻清單): *item_name*(篇名/獎項/政策法案名稱/論文題目/計畫名稱)、*item_year*(年度)、journal(期刊名)、journal_type(期刊屬SSCI/SCI/TSSCI or equivalent)、co_worker_in(與本院教授共同創作姓名)、co_worker_out(與本院學生或本校外院師生或校外人士共同創作姓名)、scholarship_type(屬性)、*equis*(EQUIS分類)
 
     derived attributes: aacsb(AACSB分類)
 
