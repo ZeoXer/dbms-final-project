@@ -9,24 +9,93 @@ class Department(db.Model):
     teachers = db.relationship("Teacher", backref="department", lazy=True)
 
     def __repr__(self):
-        return f'<Department {self.name}>'
+        return f'<Department {self.name_zh}>'
 
 
 class Teacher(db.Model):
     __tablename__ = "Teacher"
-    department_id = db.Column(db.Integer, db.ForeignKey("Department.id"), nullable=False)
     id = db.Column(db.Integer, primary_key=True)
     name_zh = db.Column(db.String(80), nullable=False)
     name_en = db.Column(db.String(80), nullable=True)
     title = db.Column(db.String(80), nullable=True)
     year_to_school = db.Column(db.Integer, nullable=True)
+    department_id = db.Column(db.Integer, db.ForeignKey("Department.id"), nullable=False)
 
     def __repr__(self):
-        return f'<Teacher {self.name}>'
-        
+        return f'<Teacher {self.name_zh}>'
+
+
+class FacultyType(db.Model):
+    __tablename__ = "FacultyType"
+    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"))
+    year = db.Column(db.Integer)
+    semester = db.Column(db.Integer)
+    faculty_type = db.Column(db.String(80))
+
+    __table_args__ = (
+        db.PrimaryKeyConstraint('teacher_id', 'year', 'semester'),
+    )
+
+    def __repr__(self):
+        return f'<FacultyType {self.teacher_id} {self.year}-{self.semester}>'
+
+
+class Class(db.Model):
+    __tablename__ = "Class"
+    teacher_id = db.Column(db.Integer)
+    year = db.Column(db.Integer)
+    semester = db.Column(db.Integer)
+    degree = db.Column(db.String(80))
+    class_number = db.Column(db.Integer)
+    
+    __table_args__ = (
+        db.PrimaryKeyConstraint('teacher_id', 'year', 'semester', 'degree'),
+        db.ForeignKeyConstraint(['teacher_id', 'year', 'semester'], ['FacultyType.teacher_id', 'FacultyType.year', 'FacultyType.semester'])
+    )
+    
+    def __repr__(self):
+        return f'<Class {self.name} {self.year}-{self.semester} {self.degree} {self.class_number}>'
+    
+    
+class PartTime(db.Model):
+    __tablename__ = "PartTime"
+    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"))
+    pt_company = db.Column(db.String(80))
+    pt_department = db.Column(db.String(80))
+    pt_position = db.Column(db.String(80))
+    pt_start = db.Column(db.String(10))
+    pt_end = db.Column(db.String(10))
+    
+    __table_args__ = (
+        db.PrimaryKeyConstraint('teacher_id', 'pt_company', 'pt_department', 'pt_position', 'pt_start', 'pt_end'),
+    )
+    
+    def __repr__(self):
+        return f'<PartTime {self.teacher_id} {self.pt_company} {self.pt_department} {self.pt_position} {self.pt_start}-{self.pt_end}>'
+    
+
+class List(db.Model):
+    __tablename__ = "List"
+    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"))
+    item_name= db.Column(db.String(500))
+    item_year = db.Column(db.Integer)
+    journal_name = db.Column(db.String(255))
+    journal_type = db.Column(db.String(1))
+    co_worker_in = db.Column(db.String(255))
+    co_worker_out = db.Column(db.String(255))
+    scholarship_type = db.Column(db.String(50))
+    equis = db.Column(db.String(100))
+    
+    __table_args__ = (
+        db.PrimaryKeyConstraint('teacher_id', 'item_name', 'item_year'),
+    )
+    
+    def __repr__(self):
+        return f'<List {self.teacher_id} {self.item_name}>'
+    
 
 class Resume(db.Model):
-    __tablename__ = "resume"
+    __tablename__ = "Resume"
     teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"), primary_key=True)
     resume_year = db.Column(db.Integer, primary_key=True)
     highest_edu_degree = db.Column(db.String(10), nullable=False)
@@ -54,28 +123,10 @@ class Resume(db.Model):
     IP1_2 = db.Column("IP1-2",db.Boolean, nullable=False)
     IP1_4 = db.Column("IP1-4",db.Boolean, nullable=False)
     IP1_5 = db.Column("IP1-5",db.Boolean, nullable=False)
+    
+    __table_args__ = (
+        db.PrimaryKeyConstraint('teacher_id', 'resume_year'),
+    )
 
     def __repr__(self):
         return f'<Resume {self.teacher_id} - {self.resume_year}>'
-    
-
-class List(db.Model):
-    __tablename__ = "List"
-    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"), primary_key=True)
-    item_name = db.Column(db.String(600), nullable=False)
-    item_year = db.Column(db.Integer, nullable=False)
-    journal = db.Column(db.String(1000), nullable=True)
-    journal_type = db.Column(db.String(1), nullable=True)
-    co_worker_in = db.Column(db.String(500), nullable=True)
-    co_worker_out = db.Column(db.String(500), nullable=True)
-    scholarship_type = db.Column(db.String(50), nullable=True)
-    equis = db.Column(db.String(100), nullable=False)
-
-    def __repr__(self):
-        return f'<List {self.item_name}>'
-
-    
-
-
-
-    
