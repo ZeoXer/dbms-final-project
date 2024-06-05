@@ -11,6 +11,27 @@ def health():
 
 @api.route('/departments', methods=['GET'])
 def get_departments():
+    """
+    獲取所有系所名單資訊
+    ---
+    tags: ['Department']
+    responses:
+      200:
+        schema:
+            type: array
+            items:
+                type: object
+                properties:
+                    id:
+                        type: integer
+                        description: 系所編號
+                    name_en:
+                        type: string
+                        description: 系所英文名稱
+                    name_zh:
+                        type: string
+                        description: 系所中文名稱
+    """
     departments = Department.query.all()
     department_list = []
     for department in departments:
@@ -24,6 +45,39 @@ def get_departments():
 
 @api.route('/teachers/<int:department_id>', methods=['GET'])
 def get_teachers_by_department_id(department_id):
+    """
+    獲取指定系所的所有教師名單資訊
+    ---
+    tags: ['Department']
+    parameters:
+        - name: department_id
+          in: path
+          type: integer
+          required: true
+          description: 系所編號
+    responses:
+        200:
+            schema:
+                type: array
+                items:
+                    type: object
+                    properties:
+                        id:
+                            type: integer
+                            description: 教師編號
+                        name_en:
+                            type: string
+                            description: 教師英文名稱
+                        name_zh:
+                            type: string
+                            description: 教師中文名稱
+                        title:
+                            type: string
+                            description: 教師職稱
+                        year_to_school:
+                            type: integer
+                            description: 教師到校年份
+    """
     teachers = Teacher.query.filter_by(department_id=department_id).all()
     teacher_list = []
     for teacher in teachers:
