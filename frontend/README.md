@@ -10,7 +10,7 @@ git clone https://github.com/ZeoXer/dbms-final-project.git
 
 2. 進入 `frontend` 資料夾，並使用python3建立一個本地伺服器
 ```
-cd backend
+cd frontend
 python -m http.server
 ```
 
