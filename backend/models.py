@@ -79,7 +79,7 @@ class List(db.Model):
     teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"))
     item_name= db.Column(db.String(500))
     item_year = db.Column(db.Integer)
-    journal_name = db.Column(db.String(255))
+    journal = db.Column(db.String(255))
     journal_type = db.Column(db.String(1))
     co_worker_in = db.Column(db.String(255))
     co_worker_out = db.Column(db.String(255))
