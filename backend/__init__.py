@@ -33,8 +33,8 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from models import Department, Teacher
-from api import api
+from api.departmentView import departmentView
 from teacherView import teacherView
 
-app.register_blueprint(api, url_prefix='/api')
+app.register_blueprint(departmentView, url_prefix='/departmentView')
 app.register_blueprint(teacherView, url_prefix='/teacherView')
