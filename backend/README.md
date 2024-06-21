@@ -8,9 +8,13 @@ backend
 |
 |– main.py (伺服器啟動的位置)
 |
-|– api.py (API function 的位置，可以視情況另開資料夾拆檔整理)
+|– api
+|   |
+|   |– departmentView.py (系所助教所需的資料 API)
+|   |
+|   |– teacherView.py (教師所需的資料 API)
 |
-|– models.py (定義資料庫的位置，可以視情況另開資料夾拆檔整理)
+|– models.py (定義資料庫的位置)
 
 ```
 
@@ -35,17 +39,4 @@ DATABASE_URI=資料庫連結
 4. 啟動 server
 ```
 python main.py
-```
-
-5. 若有新的修改，完成後提交紀錄並上傳 (協作方式待決定)
-```
-git add <檔案>
-git commit -m "紀錄訊息"
-git push origin main
-```
-
-* 目前測試起來其他 contributors 還不能從本機端 push 更新上去，目前還沒找到問題來源，可能可以先確認本機設定的使用者資訊是否和 GitHub 上的帳號資訊相同
-```
-git config --global user.name
-git config --global user.email
 ```
