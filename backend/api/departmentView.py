@@ -174,7 +174,7 @@ def get_department_list(department_id):
             "list": [{
                 "item_name": item.item_name,
                 "item_year": item.item_year,
-                "journal_name": item.journal_name,
+                "journal": item.journal,
                 "journal_type": item.journal_type,
                 "co_worker_in": item.co_worker_in,
                 "co_worker_out": item.co_worker_out,
