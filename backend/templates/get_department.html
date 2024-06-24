@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系所名單資訊</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>系所名單資訊</h1>
+
+    <button onclick="fetchDepartments()">獲取系所名單</button>
+    <table id="departmentsTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>中文名稱</th>
+                <th>英文名稱</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>教師名單</h2>
+    <table id="teachersTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>中文名稱</th>
+                <th>英文名稱</th>
+                <th>職稱</th>
+                <th>到校年份</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>教師貢獻清單</h2>
+    <table id="contributionsTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>教師ID</th>
+                <th>教師名稱</th>
+                <th>項目名稱</th>
+                <th>項目年份</th>
+                <th>期刊名稱</th>
+                <th>期刊類型</th>
+                <th>校內合著者</th>
+                <th>校外合著者</th>
+                <th>獎學金類型</th>
+                <th>EQUIS 類別</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>各班級開課數</h2>
+    <label for="year">學年度：</label>
+    <input type="number" id="year" name="year" value="112">
+    <label for="semester">學期：</label>
+    <input type="number" id="semester" name="semester" min="1" max="2" value="1">
+    <table id="classesTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>教師ID</th>
+                <th>教師名稱</th>
+                <th>教師專兼別</th>
+                <th>學士班</th>
+                <th>一般碩士班</th>
+                <th>博士班</th>
+                <th>MBA</th>
+                <th>IMBA</th>
+                <th>EMBA</th>
+                <th>DBA</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>教師履歷清單</h2>
+    <table id="resumesTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>教師ID</th>
+                <th>教師名稱</th>
+                <th>英文名稱</th>
+                <th>職稱</th>
+                <th>到校年份</th>
+                <th>系所</th>
+                <th>最高學歷學位</th>
+                <th>最高學歷系所</th>
+                <th>最高學歷學校</th>
+                <th>最高學歷畢業年份</th>
+                <th>經歷</th>
+                <th>教學興趣</th>
+                <th>研究興趣</th>
+                <th>學術專長</th>
+                <th>ADM</th>
+                <th>ED</th>
+                <th>SER</th>
+                <th>PA1-1&IP1-1</th>
+                <th>PA1-2</th>
+                <th>PA1-3</th>
+                <th>PA1-4</th>
+                <th>PA1-5</th>
+                <th>PA1-6</th>
+                <th>PA1-7&IP1-3</th>
+                <th>PA1-8&SP1-3</th>
+                <th>SP1-1</th>
+                <th>SP1-2</th>
+                <th>IP1a</th>
+                <th>IP1-2</th>
+                <th>IP1-4</th>
+                <th>IP1-5</th>
+                <th>履歷年份</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchDepartments() {
+            try {
+                const response = await fetch('/departments');
+                const departments = await response.json();
+                displayDepartments(departments);
+            } catch (error) {
+                console.error('Error fetching departments:', error);
+            }
+        }
+
+        async function fetchTeachers(department_id) {
+            try {
+                const response = await fetch(`/teachers/${department_id}`);
+                const teachers = await response.json();
+                displayTeachers(teachers);
+            } catch (error) {
+                console.error('Error fetching teachers:', error);
+            }
+        }
+
+        async function fetchContributions(department_id) {
+            try {
+                const response = await fetch(`/list/${department_id}`);
+                const contributions = await response.json();
+                displayContributions(contributions);
+            } catch (error) {
+                console.error('Error fetching contributions:', error);
+            }
+        }
+
+        async function fetchClasses(department_id, year, semester) {
+            try {
+                const response = await fetch(`/class/${department_id}/${year}/${semester}`);
+                const classes = await response.json();
+                displayClasses(classes);
+            } catch (error) {
+                console.error('Error fetching classes:', error);
+            }
+        }
+
+        async function fetchResumes(department_id) {
+            try {
+                const response = await fetch(`/resume/${department_id}`);
+                const resumes = await response.json();
+                displayResumes(resumes);
+            } catch (error) {
+                console.error('Error fetching resumes:', error);
+            }
+        }
+
+        function displayDepartments(departments) {
+            const table = document.getElementById('departmentsTable');
+            const tbody = table.querySelector('tbody');
+            tbody.innerHTML = '';
+
+            departments.forEach(department => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${department.id}</td>
+                    <td>${department.name_zh}</td>
+                    <td>${department.name_en}</td>
+                    <td>
+                        <button onclick="fetchTeachers(${department.id})">查看教師</button>
+                        <button onclick="fetchContributions(${department.id})">查看貢獻清單</button>
+                        <button onclick="fetchClasses(${department.id}, document.getElementById('year').value, document.getElementById('semester').value)">查看開課數</button>
+                        <button onclick="fetchResumes(${department.id})">查看履歷</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            table.style.display = 'table';
+        }
+
+        function displayTeachers(teachers) {
+            const table = document.getElementById('teachersTable');
+            const tbody = table.querySelector('tbody');
+            tbody.innerHTML = '';
+
+            teachers.forEach(teacher => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${teacher.id}</td>
+                    <td>${teacher.name_zh}</td>
+                    <td>${teacher.name_en}</td>
+                    <td>${teacher.title}</td>
+                    <td>${teacher.year_to_school}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            table.style.display = 'table';
+        }
+
+        function displayContributions(contributions) {
+            const table = document.getElementById('contributionsTable');
+            const tbody = table.querySelector('tbody');
+            tbody.innerHTML = '';
+
+            contributions.forEach(teacher => {
+                teacher.list.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${teacher.id}</td>
+                        <td>${teacher.name_zh}</td>
+                        <td>${item.item_name}</td>
+                        <td>${item.item_year}</td>
+                        <td>${item.journal_name}</td>
+                        <td>${item.journal_type}</td>
+                        <td>${item.co_worker_in}</td>
+                        <td>${item.co_worker_out}</td>
+                        <td>${item.scholarship_type}</td>
+                        <td>${item.equis}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            });
+
+            table.style.display = 'table';
+        }
+
+        function displayClasses(classes) {
+            const table = document.getElementById('classesTable');
+            const tbody = table.querySelector('tbody');
+            tbody.innerHTML = '';
+
+            classes.forEach(teacher => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${teacher.id}</td>
+                    <td>${teacher.name_zh}</td>
+                    <td>${teacher.faculty_type}</td>
+                    <td>${teacher.class_number_list.學士班}</td>
+                    <td>${teacher.class_number_list.一般碩士班}</td>
+                    <td>${teacher.class_number_list.博士班}</td>
+                    <td>${teacher.class_number_list.MBA}</td>
+                    <td>${teacher.class_number_list.IMBA}</td>
+                    <td>${teacher.class_number_list.EMBA}</td>
+                    <td>${teacher.class_number_list.DBA}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            table.style.display = 'table';
+        }
+
+        function displayResumes(resumes) {
+            const table = document.getElementById('resumesTable');
+            const tbody = table.querySelector('tbody');
+            tbody.innerHTML = '';
+
+            resumes.forEach(teacher => {
+                teacher.resumes.forEach(resume => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${teacher.id}</td>
+                        <td>${teacher.name_zh}</td>
+                        <td>${teacher.name_en}</td>
+                        <td>${teacher.title}</td>
+                        <td>${teacher.year_to_school}</td>
+                        <td>${teacher.department}</td>
+                        <td>${resume.highest_edu_degree}</td>
+                        <td>${resume.highest_edu_department}</td>
+                        <td>${resume.highest_edu_school}</td>
+                        <td>${resume.highest_edu_graduation_year}</td>
+                        <td>${resume.experience}</td>
+                        <td>${resume.teaching_interests}</td>
+                        <td>${resume.research_interests}</td>
+                        <td>${resume.discipline}</td>
+                        <td>${resume.ADM}</td>
+                        <td>${resume.ED}</td>
+                        <td>${resume.SER}</td>
+                        <td>${resume.PA1_1_IP1_1}</td>
+                        <td>${resume.PA1_2}</td>
+                        <td>${resume.PA1_3}</td>
+                        <td>${resume.PA1_4}</td>
+                        <td>${resume.PA1_5}</td>
+                        <td>${resume.PA1_6}</td>
+                        <td>${resume.PA1_7_IP1_3}</td>
+                        <td>${resume.PA1_8_SP1_3}</td>
+                        <td>${resume.SP1_1}</td>
+                        <td>${resume.SP1_2}</td>
+                        <td>${resume.IP1a}</td>
+                        <td>${resume.IP1_2}</td>
+                        <td>${resume.IP1_4}</td>
+                        <td>${resume.IP1_5}</td>
+                        <td>${resume.resume_year}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            });
+
+            table.style.display = 'table';
+        }
+    </script>
+</body>
+</html>
