@@ -14,15 +14,15 @@ class Department(db.Model):
 
 class Teacher(db.Model):
     __tablename__ = "Teacher"
-    id = db.Column(db.Integer, primary_key=True)
-    name_zh = db.Column(db.String(80), nullable=False)
-    name_en = db.Column(db.String(80), nullable=True)
-    title = db.Column(db.String(80), nullable=True)
-    year_to_school = db.Column(db.Integer, nullable=True)
-    department_id = db.Column(db.Integer, db.ForeignKey("Department.id"), nullable=False)
+    teacher_id = db.Column(db.Integer, primary_key=True)
+    Cname = db.Column(db.String(80), nullable=False)
+    Ename = db.Column(db.String(80), nullable=True)
+    job_title = db.Column(db.String(80), nullable=True)
+    year = db.Column(db.Integer, nullable=True)
+    dep_id = db.Column(db.Integer, db.ForeignKey("Department.id"), nullable=False)
 
     def __repr__(self):
-        return f'<Teacher {self.name_zh}>'
+        return f'<Teacher {self.Cname}>'
 
 
 class FacultyType(db.Model):
@@ -76,7 +76,7 @@ class PartTime(db.Model):
 
 class List(db.Model):
     __tablename__ = "List"
-    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"))
+    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.teacher_id"))
     item_name= db.Column(db.String(500))
     item_year = db.Column(db.Integer)
     journal = db.Column(db.String(255))
@@ -96,7 +96,7 @@ class List(db.Model):
 
 class Resume(db.Model):
     __tablename__ = "Resume"
-    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"), primary_key=True)
+    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.teacher_id"), primary_key=True)
     resume_year = db.Column(db.Integer, primary_key=True)
     highest_edu_degree = db.Column(db.String(10), nullable=False)
     highest_edu_department = db.Column(db.String(500), nullable=True)
