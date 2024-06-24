@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教師履歷填寫</title>
+    <style>
+        table {
+    	    border-collapse: collapse;
+   	     width: 100%;
+    	}
+    
+    	th, td {
+     	   border: 1px solid black;
+     	   padding: 8px;
+      	  text-align: left;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .left, .right {
+            width: 50%;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .info-container {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>基本資料與近一年社會影響力</h2>
+            <div class="info-container">
+                <p><span id="CName1"></span></p>
+                <p><span id="jobtitle"></span></p>
+                <p>您好：</p>
+            </div>
+            <p>請確認以下基本資料是否正確，如需修正，請直接點選欄位進行修改；「近一年」相關問項，請以 <span id="time-range"></span>之經歷填入。謝謝！</p>
+            <form id="resumeForm">
+                <div class="form-group">
+                    <label for="teacher-id">教師編號</label>
+                    <input type="text" id="teacher_id" name="teacher-id" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="chinese-name">中文姓名</label>
+                    <input type="text" id="Cname" name="chinese-name" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="english-name">英文姓名</label>
+                    <input type="text" id="Ename" name="english-name" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="title">職稱</label>
+                    <select id="title" name="title">
+                        <option value="Professor">Professor 教授</option>
+                        <option value="Associate Professor">Associate Professor 副教授</option>
+                        <option value="Assistant Professor">Assistant Professor 助理教授</option>
+                        <option value="Instructor">Instructor 講師</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="join-year">到職年</label>
+                    <input type="text" id="year" name="join-year" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="department">系所</label>
+                    <input type="text" id="dep_id" name="department" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="highest-degree">最高學位</label>
+                    <select id="highest-degree" name="highest-degree">
+                        <option value="PhD">PhD 博士</option>
+                        <option value="TAX">TAX 稅法碩士</option>
+                        <option value="A+L">A+L 會計及法律雙碩士</option>
+                        <option value="ABD">ABD 博士候選人</option>
+                        <option value="Master">Master 碩士</option>
+                        <option value="Bachelor">Bachelor 學士</option>
+                        <option value="Other">Other 其他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="degree-department">最高學位系所</label>
+                    <input type="text" id="degree-department" name="degree-department">
+                </div>
+                <div class="form-group">
+                    <label for="degree-school">最高學位校名</label>
+                    <input type="text" id="degree-school" name="degree-school">
+                </div>
+                <div class="form-group">
+                    <label for="degree-year">取得最高學位年份</label>
+                    <input type="number" id="degree-year" name="degree-year">
+                </div>
+                <div class="form-group">
+                    <label for="experience">經歷</label>
+                    <textarea id="experience" name="experience"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="teaching-interests">教學興趣</label>
+                    <textarea id="teaching-interests" name="teaching-interests"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="research-interests">研究興趣</label>
+                    <textarea id="research-interests" name="research-interests"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="admin-position">近一年擔任行政職務</label>
+                    <select id="admin-position" name="admin-position">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="executive-class">近一年教授高管班(指無學位的課程)，如：企家班。</label>
+                    <select id="executive-class" name="executive-class">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="other-services">近一年教學責任-其他服務，如：借調、期刊編輯、主編、審稿</label>
+                    <select id="other-services" name="other-services">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="secondment">近一年借調至產學界或政府機關</label>
+                    <select id="secondment" name="secondment">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="industry-interaction">近一年參與產業界的活動或與產業界主管有聯繫互動</label>
+                    <select id="industry-interaction" name="industry-interaction">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="industry-participation">近一年參與產業經營或擔任專業職務</label>
+                    <select id="industry-participation" name="industry-participation">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="association-position">近一年於學會/協會組織擔任高階職務</label>
+                    <select id="association-position" name="association-position">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="association-activity">近一年參與學會/協會團體組織之活動</label>
+                    <select id="association-activity" name="association-activity">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="long-term-consulting">近一年長期提供企業諮詢（一年以上）</label>
+                    <select id="long-term-consulting" name="long-term-consulting">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="board-position">近一年擔任董事會（理事會）/監察人（監事）相關職務</label>
+                    <select id="board-position" name="board-position">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="business-education">近一年具商管教育經歷並持續累積中</label>
+                    <select id="business-education" name="business-education">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="academic-industry-activity">近一年參與學術/業界相關之活動/社群/學會/協會</label>
+                    <select id="academic-industry-activity" name="academic-industry-activity">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="industry-position">近一年於業界擔任重要職務</label>
+                    <select id="industry-position" name="industry-position">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="full-part-time-industry">近一年具有產業界全職或兼職之工作</label>
+                    <select id="full-part-time-industry" name="full-part-time-industry">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="business-owner">近一年企業主、合夥人、或專業經理人</label>
+                    <select id="business-owner" name="business-owner">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="active-in-industry">近一年業界活躍人士</label>
+                    <select id="active-in-industry" name="active-in-industry">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="professional-certification">會計師、律師或擁有其他專業證照</label>
+                    <select id="professional-certification" name="professional-certification">
+                        <option value="0" selected>無</option>
+                        <option value="1">有</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fill-year">填寫年份</label>
+                    <input type="text" id="fill-year" name="fill-year">
+                </div>
+                <button type="button" class="submit-btn" onclick="saveDataAndGoToNextPage()">下一頁</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const teacher_id = urlParams.get('teacher_id');
+
+            fetch(`/teacher?teacher_id=${encodeURIComponent(teacher_id)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                        window.location.href = 'login.html';
+                    } else {
+                        document.getElementById('teacher_id').value = data.teacher_id;
+                        document.getElementById('Cname').value = data.name_zh;
+                        document.getElementById('Ename').value = data.name_en;
+                        document.getElementById('year').value = data.year_to_school;
+                        document.getElementById('dep_id').value = data.department_id;
+
+                        document.getElementById('CName1').textContent = data.name_zh;
+                        document.getElementById('jobtitle').textContent = data.title;
+
+                        const currentYear = new Date().getFullYear();
+                        const currentmonth = new Date().getMonth() + 1;
+                        const currentdate = new Date().getDate();
+                        const startYear = currentYear - 1;
+                        document.getElementById('time-range').textContent = `${startYear}.${currentmonth}.${currentdate}-${currentYear}.${currentmonth}.${currentdate}`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('教師資料獲取失敗，請稍後再試。');
+                    window.location.href = 'login.html';
+                });
+        });
+
+        function saveDataAndGoToNextPage() {
+            const formElement = document.getElementById('resumeForm');
+            const formData = new FormData(formElement);
+            const data = Object.fromEntries(formData.entries());
+            const teacher_id = document.getElementById('teacher_id').value;
+
+            data.ADM = document.getElementById('admin-position').value === "1";
+            data.ED = document.getElementById('executive-class').value === "1";
+            data.SER = document.getElementById('other-services').value === "1";
+            data.PA1_1_IP1_1 = document.getElementById('secondment').value === "1";
+            data.PA1_2 = document.getElementById('industry-interaction').value === "1";
+            data.PA1_3 = document.getElementById('industry-participation').value === "1";
+            data.PA1_4 = document.getElementById('association-position').value === "1";
+            data.PA1_5 = document.getElementById('association-activity').value === "1";
+            data.PA1_6 = document.getElementById('long-term-consulting').value === "1";
+            data.PA1_7_IP1_3 = document.getElementById('board-position').value === "1";
+            data.PA1_8_SP1_3 = document.getElementById('business-education').value === "1";
+            data.SP1_1 = document.getElementById('academic-industry-activity').value === "1";
+            data.SP1_2 = document.getElementById('industry-position').value === "1";
+            data.IP1a = document.getElementById('full-part-time-industry').value === "1";
+            data.IP1_2 = document.getElementById('business-owner').value === "1";
+            data.IP1_4 = document.getElementById('active-in-industry').value === "1";
+            data.IP1_5 = document.getElementById('professional-certification').value === "1";
+
+            console.log("Sending data: ", data); // 打印數據以進行檢查
+
+            fetch(`/teacher/${teacher_id}/basic_info`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('資料已成功發送');
+                    window.location.href = 'contribute_list.html';
+                } else {
+                    return response.json().then(errorData => {
+                        throw new Error(errorData.error || 'Network response was not ok.');
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert(`資料提交失敗: ${error.message}`);
+            });
+        }
+    </script>
+</body>
+</html>
