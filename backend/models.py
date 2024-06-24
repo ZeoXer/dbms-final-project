@@ -3,13 +3,13 @@ from main import db
 
 class Department(db.Model):
     __tablename__ = "Department"
-    id = db.Column(db.Integer, primary_key=True)
-    name_en = db.Column(db.String(80), nullable=False)
-    name_zh = db.Column(db.String(80), nullable=False)
+    department_id = db.Column(db.Integer, primary_key=True)
+    department_Ename = db.Column(db.String(80), nullable=False)
+    department_Cname = db.Column(db.String(80), nullable=False)
     teachers = db.relationship("Teacher", backref="department", lazy=True)
 
     def __repr__(self):
-        return f'<Department {self.name_zh}>'
+        return f'<Department {self.department_Cname}>'
 
 
 class Teacher(db.Model):
@@ -19,7 +19,7 @@ class Teacher(db.Model):
     Ename = db.Column(db.String(80), nullable=True)
     job_title = db.Column(db.String(80), nullable=True)
     year = db.Column(db.Integer, nullable=True)
-    dep_id = db.Column(db.Integer, db.ForeignKey("Department.id"), nullable=False)
+    dep_id = db.Column(db.Integer, db.ForeignKey("Department.department_id"), nullable=False)
 
     def __repr__(self):
         return f'<Teacher {self.Cname}>'
@@ -27,10 +27,10 @@ class Teacher(db.Model):
 
 class FacultyType(db.Model):
     __tablename__ = "FacultyType"
-    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.id"))
+    teacher_id = db.Column(db.Integer, db.ForeignKey("Teacher.teacher_id"))
     year = db.Column(db.Integer)
     semester = db.Column(db.Integer)
-    faculty_type = db.Column(db.String(80))
+    teacher_type = db.Column(db.String(80))
 
     __table_args__ = (
         db.PrimaryKeyConstraint('teacher_id', 'year', 'semester'),
@@ -46,7 +46,7 @@ class Class(db.Model):
     year = db.Column(db.Integer)
     semester = db.Column(db.Integer)
     degree = db.Column(db.String(80))
-    class_number = db.Column(db.Integer)
+    num_class = db.Column(db.Integer)
     
     __table_args__ = (
         db.PrimaryKeyConstraint('teacher_id', 'year', 'semester', 'degree'),
@@ -54,7 +54,7 @@ class Class(db.Model):
     )
     
     def __repr__(self):
-        return f'<Class {self.name} {self.year}-{self.semester} {self.degree} {self.class_number}>'
+        return f'<Class {self.name} {self.year}-{self.semester} {self.degree} {self.num_class}>'
     
     
 class PartTime(db.Model):
